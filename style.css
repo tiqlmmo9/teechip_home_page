@@ -804,7 +804,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.featured-collection__list {
+.featured-collection__list, .custom-mugs__list{
   /* background-color: #fafa; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
