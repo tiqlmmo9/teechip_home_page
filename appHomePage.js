@@ -287,49 +287,36 @@ function topFunction() {
 //     }
 //   });
 // }
-var box_language = ".box-language";
-var cus_language = ".custom-select-box-language";
-var box_currency = ".box-currency";
-var cus_currency = ".custom-select-box-currency";
-
-chooseOptionBox(box_language, cus_language);
-chooseOptionBox(box_currency, cus_currency);
-
-// document.querySelector(".box_2").addEventListener("click", function() {
-//   //open custom-select. toggle ở đây để đổi custom-select thành custom-select open
-//   this.querySelector(".custom-select").classList.toggle("open");
-// });
-
-function chooseOptionBox(box, custom_select) {
-  document.querySelector(box).addEventListener("click", function() {
-    //open custom-select. toggle ở đây để đổi custom-select thành custom-select open
+for (choose of document.querySelectorAll(".select-box"))
+  choose.addEventListener("click", function() {
+    // debugger
     this.querySelector(".custom-select").classList.toggle("open");
   });
-  //option = all custom-option
-  for (const option of document.querySelectorAll(".select-box-option")) {
-    //nếu click option
-    option.addEventListener("click", function() {
-      //this trong Event Handlers là phần tử nhận event. ở đây là phần tử nhận click ở trên
-      // nếu phân tử được click không chứa "select"
-      if (!this.classList.contains("selected")) {
-        // remove selected đang chọn trước đó
-        //phải dùng this, hạn chế xài document
-        this.parentNode
-          .querySelector(".select-box-option.selected")
-          .classList.remove("selected");
-        // add class selected vào phần tử được click
-        this.classList.add("selected");
-        //trả về
-        this.closest(".custom-select").querySelector(
-          ".select-box__trigger span"
-        ).textContent = this.textContent;
-      }
-    });
-  }
-  window.addEventListener("click", function(e) {
-    const select = document.querySelector(custom_select);
-    if (!select.contains(e.target)) {
-      select.classList.remove("open");
+for (const chooseListOption of document.querySelectorAll(
+  ".select-box-option"
+)) {
+  chooseListOption.addEventListener("click", function() {
+    if (!this.classList.contains("selected")) {
+      // debugger;
+      this.parentNode.querySelector(".selected").classList.remove("selected");
+      this.classList.add("selected");
+
+      // console.log(
+      //   this.closest(".custom-select").querySelector(".select-box__text")
+
+      // );
+      this.closest(".custom-select").querySelector(
+        ".select-box__text"
+      ).textContent = this.textContent;
     }
   });
 }
+window.addEventListener("click", function(e) {
+  //thêm ở chỗ mô thì remove chỗ đó (đang thêm ở .custome-select)
+  for (const select of document.querySelectorAll(".custom-select")) {
+    debugger;
+    if (!select.contains(e.target)) {
+      select.classList.remove("open");
+    }
+  }
+});

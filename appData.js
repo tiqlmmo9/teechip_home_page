@@ -44,34 +44,41 @@ listCategory.forEach(function insertCategory(cat) {
 
 //Recommend Product
 var listRecommendProduct = [
-    {
-        id: 1,
-        imageRecommendProduct : "img/january_born.jpg",
-        nameRecommendProduct : "January Born",
-        priceRecommendProduct : "$28.95"
-    },
-    {
-        id: 2,
-        imageRecommendProduct : "img/january_born.jpg",
-        nameRecommendProduct : "January Born",
-        priceRecommendProduct : "$28.95"
-    },
-    {
-        id: 3,
-        imageRecommendProduct : "img/january_born.jpg",
-        nameRecommendProduct : "January Born",
-        priceRecommendProduct : "$28.95"
-    },
-    {
-        id: 4,
-        imageRecommendProduct : "img/january_born.jpg",
-        nameRecommendProduct : "January Born",
-        priceRecommendProduct : "$28.95"
-    }
-]
+  {
+    id: 1,
+    imageRecommendProduct: "img/january_born.jpg",
+    nameRecommendProduct: "January Born",
+    priceRecommendProduct: "$28.95"
+  },
+  {
+    id: 2,
+    imageRecommendProduct: "img/january_born.jpg",
+    nameRecommendProduct: "January Born",
+    priceRecommendProduct: "$28.95"
+  },
+  {
+    id: 3,
+    imageRecommendProduct: "img/january_born.jpg",
+    nameRecommendProduct: "January Born",
+    priceRecommendProduct: "$28.95"
+  },
+  {
+    id: 4,
+    imageRecommendProduct: "img/january_born.jpg",
+    nameRecommendProduct: "January Born",
+    priceRecommendProduct: "$28.95"
+  }
+];
 
-listRecommendProduct.forEach(function insertRecommend(rem){
-    document.querySelector(".product-recommend__list").innerHTML+='<div class="product__item"><div class="product__img"><img src="'+rem.imageRecommendProduct+'" alt=""></div><div class="product__desc"><div class="product__name">'+rem.nameRecommendProduct+'</div><div class="product__price">'+rem.priceRecommendProduct+'</div></div></div>'
+listRecommendProduct.forEach(function insertRecommend(rem) {
+  document.querySelector(".product-recommend__list").innerHTML +=
+    '<div class="product__item"><div class="product__img"><img src="' +
+    rem.imageRecommendProduct +
+    '" alt=""></div><div class="product__desc"><div class="product__name">' +
+    rem.nameRecommendProduct +
+    '</div><div class="product__price">' +
+    rem.priceRecommendProduct +
+    "</div></div></div>";
 });
 
 //Featured Collection
@@ -106,9 +113,18 @@ var listFeaturedCollection = [
   }
 ];
 
-listFeaturedCollection.forEach(function insertFeaturedCollection(fea){
-    document.querySelector(".featured-collection__list").innerHTML+='<div class="product__item"><div class="product__img"><img src="'+fea.imageFeaturedProduct+'" alt=""></div><div class="product__desc"><div class="product__name">'+fea.nameFeaturedProduct+'</div><div class="product__featured"><div class="product__price">'+fea.priceFeaturedProduct+'</div><span class="product__text-color">'+fea.numberColorFeaturedProduct+'</span></div></div></div>'
-})
+listFeaturedCollection.forEach(function insertFeaturedCollection(fea) {
+  document.querySelector(".featured-collection__list").innerHTML +=
+    '<div class="product__item"><div class="product__img"><img src="' +
+    fea.imageFeaturedProduct +
+    '" alt=""></div><div class="product__desc"><div class="product__name">' +
+    fea.nameFeaturedProduct +
+    '</div><div class="product__featured"><div class="product__price">' +
+    fea.priceFeaturedProduct +
+    '</div><span class="product__text-color">' +
+    fea.numberColorFeaturedProduct +
+    "</span></div></div></div>";
+});
 
 //Personable Product
 
@@ -143,9 +159,18 @@ var listPersonalProduct = [
   }
 ];
 
-listPersonalProduct.forEach(function insertPersonalProduct(per){
-    document.querySelector(".product-personable__list").innerHTML+='<div class="product__item"><div class="product__img"><img src="'+per.imagePersonalProduct+'" alt=""></div><div class="product-personal__icon"><i class="fas fa-user-edit"></i></div><div class="product__desc"><div class="product-personalizable">Personalizable</div><div class="product__name">'+per.namePersonalProduct+'</div><div class="product__featured"><div class="product__price">'+per.pricePersonalProduct+'</div><span class="product__text-color">'+per.numberColorPersonalProduct+'</span></div></div></div>'
-})
+listPersonalProduct.forEach(function insertPersonalProduct(per) {
+  document.querySelector(".product-personable__list").innerHTML +=
+    '<div class="product__item"><div class="product__img"><img src="' +
+    per.imagePersonalProduct +
+    '" alt=""></div><div class="product-personal__icon"><i class="fas fa-user-edit"></i></div><div class="product__desc"><div class="product-personalizable">Personalizable</div><div class="product__name">' +
+    per.namePersonalProduct +
+    '</div><div class="product__featured"><div class="product__price">' +
+    per.pricePersonalProduct +
+    '</div><span class="product__text-color">' +
+    per.numberColorPersonalProduct +
+    "</span></div></div></div>";
+});
 
 //Custom mugs
 
@@ -191,3 +216,18 @@ listCustomMugs.forEach(function insertPersonalProduct(per) {
     per.numberColorPersonalProduct +
     "</span></div></div></div>";
 });
+
+//Footer
+
+// var listLanguage = [
+//   "English (United States)",
+//   "English (United Kingdom)",
+//   "English (Canada)"
+// ];
+
+// listLanguage.forEach(function insertFooter(lang) {
+//   document.querySelector(".select-box__content").innerHTML +=
+//     '<div class="select-box-option">                                            <div class="select-box-option__text">                                       ' +
+//     lang +
+//     '                                            </div>                                            <div class="select-box-option__icon" id="box_icon">                                                <i class="fas fa-check"></i>                                            </div>                                        </div>';
+// });
