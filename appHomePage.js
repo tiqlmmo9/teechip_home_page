@@ -33,21 +33,9 @@ function toggle_visibility() {
   text_input.oninput = function(e) {
     btn_close_to_del.style.display = "flex";
   };
-  // btn_close_to_del.style.display="flex";
-  // var a=document.querySelector("input").value;
-  // console.log(a);
 }
 
-// var inputElement = document.querySelector('input[type="text"]');
-// inputElement.oninput =
 
-// function newFunction() {
-//   if (text_input.value != "") {
-//     btn_close_to_del.style.display = "flex";
-//   } else {
-//     btn_close_to_del.style.display = "none";
-//   }
-// }
 // Click icon x (close) to delete text input
 function close_to_del() {
   text_input.value = "";
@@ -74,27 +62,6 @@ function originPlaceholder() {
   input_line_bottom.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (!search.contains(event.target)) {
-//     text_input.blur();
-//     originPlaceholder();
-//     // Display none shopper login form
-//     shopper_login.style.display = "none";
-
-//     //Check value input to change search placeholder text
-//     if (text_input.value.trim().length != 0) {
-//       zoom_placeholder.style.fontSize = "0.8rem";
-//       btn_close_to_del.style.display = "flex";
-//     } else {
-//       zoom_placeholder.style.transform = "translateY(+.75rem)";
-//       zoom_placeholder.style.fontSize = "1rem";
-
-//       text_input.value = ""; //delete whitespace to mouse pointer returns to the first position
-//       btn_close_to_del.style.display = "none";
-//     }
-//   }
-// };
 //click login/signup to open form login
 function click_to_login() {
   shopper_login.style.display = "flex";
@@ -143,6 +110,7 @@ window.addEventListener("click", function(e) {
     document.querySelector("body").style.overflow = "auto";
   }
 });
+
 // LOGIN FACEBOOK
 // function statusChangeCallback(response) {
 //   // Called with the results from FB.getLoginStatus().
@@ -263,30 +231,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-//select-box option
-//Nếu click vào custom-select-wrapper
-
-// //option = all custom-option
-// for (const option of document.querySelectorAll(".select-box-option")) {
-//   //nếu click option
-//   option.addEventListener("click", function() {
-//     //this trong Event Handlers là phần tử nhận event. ở đây là phần tử nhận click ở trên
-//     // nếu phân tử được click không chứa "select"
-//     if (!this.classList.contains("selected")) {
-//       // remove selected đang chọn trước đó
-//       document
-//         .querySelector(".select-box-option.selected")
-//         .classList.remove("selected");
-//       // add class selected vào phần tử được click
-//       this.classList.add("selected");
-
-//       //trả về
-//       this.closest(".custom-select").querySelector(
-//         ".select-box__trigger span"
-//       ).textContent = this.textContent;
-//     }
-//   });
-// }
+//custom select box
 for (choose of document.querySelectorAll(".select-box"))
   choose.addEventListener("click", function() {
     // debugger
